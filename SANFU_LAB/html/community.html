@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANFU LAB - 潮流社区</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">SANFU LAB</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ai-outfit.html">AI穿搭</a></li>
+                <li><a href="community.html">潮流社区</a></li>
+                <li><a href="lab.html">穿搭实验室</a></li>
+                <li><a href="stores.html">品牌故事</a></li>
+                <li><a href="member.html">会员中心</a></li>
+                <li><a href="closet.html">我的衣橱</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索穿搭风格..." id="searchInput">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-avatar" onclick="location.href='login.html'">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="community">
+        <div class="community-container">
+            <div class="community-header">
+                <h1 class="community-title">潮流社区</h1>
+                <div class="community-tabs">
+                    <button class="tab-item active" data-category="hot">今日热门</button>
+                    <button class="tab-item" data-category="ootd">达人OOTD</button>
+                    <button class="tab-item" data-category="ai">AI搭配挑战</button>
+                </div>
+            </div>
+
+            <div class="community-feed">
+                <div class="post-card hot" >
+                    <img src="../images/community/hot1.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">L</div>
+                            <span class="post-author">时尚辣妹Lisa</span>
+                        </div>
+                        <p class="post-caption">今天的Y2K风格穿搭，银色上衣太爱了！搭配高腰短裙绝绝子～ #Y2K #辣妹穿搭</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#Y2K</span>
+                            <span class="post-tag">#辣妹穿搭</span>
+                            <span class="post-tag">#OOTD</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 2.3k</span>
+                            <span><i class="fas fa-comment"></i> 156</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card hot" >
+                    <img src="../images/community/hot2.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">M</div>
+                            <span class="post-author">穿搭博主Mia</span>
+                        </div>
+                        <p class="post-caption">Clean Fit永远的神！简单的白衬衫也能穿出高级感～ #极简 #CleanFit</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#极简</span>
+                            <span class="post-tag">#CleanFit</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 1.8k</span>
+                            <span><i class="fas fa-comment"></i> 89</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card hot" >
+                    <img src="../images/community/hot3.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">S</div>
+                            <span class="post-author">色彩达人Sunny</span>
+                        </div>
+                        <p class="post-caption">多巴胺穿搭让心情变好！今天是彩虹女孩～ #多巴胺穿搭 #色彩爆炸</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#多巴胺穿搭</span>
+                            <span class="post-tag">#色彩爆炸</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 3.1k</span>
+                            <span><i class="fas fa-comment"></i> 234</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card hot" >
+                    <img src="../images/community/hot4.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">R</div>
+                            <span class="post-author">复古达人Ruby</span>
+                        </div>
+                        <p class="post-caption">美式复古永远经典！牛仔外套+高腰裤yyds～ #美式复古 #复古穿搭</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#美式复古</span>
+                            <span class="post-tag">#复古穿搭</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 1.5k</span>
+                            <span><i class="fas fa-comment"></i> 67</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ootd" >
+                    <img src="../images/community/oodt1.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">J</div>
+                            <span class="post-author">运动男孩Jack</span>
+                        </div>
+                        <p class="post-caption">运动机能风穿搭，舒适又帅气！适合周末运动～ #运动风 #机能风</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#运动风</span>
+                            <span class="post-tag">#机能风</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 987</span>
+                            <span><i class="fas fa-comment"></i> 45</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ootd" >
+                    <img src="../images/community/ootd2.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">A</div>
+                            <span class="post-author">温暖少女Amy</span>
+                        </div>
+                        <p class="post-caption">秋天就是要穿暖暖的毛衣！燕麦色太温柔了～ #秋日穿搭 #温柔风</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#秋日穿搭</span>
+                            <span class="post-tag">#温柔风</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 2.7k</span>
+                            <span><i class="fas fa-comment"></i> 178</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ootd" >
+                    <img src="../images/community/ootd3.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">D</div>
+                            <span class="post-author">暗黑少女Diana</span>
+                        </div>
+                        <p class="post-caption">今天是暗黑系女孩！皮衣+链条太酷了～ #暗黑风 #朋克穿搭</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#暗黑风</span>
+                            <span class="post-tag">#朋克穿搭</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 1.2k</span>
+                            <span><i class="fas fa-comment"></i> 92</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ootd" >
+                    <img src="../images/community/ootd4.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">E</div>
+                            <span class="post-author">学院风Emily</span>
+                        </div>
+                        <p class="post-caption">学院风穿搭永远不会过时！西装+百褶裙太减龄了～ #学院风 #JK</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#学院风</span>
+                            <span class="post-tag">#JK</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 2.1k</span>
+                            <span><i class="fas fa-comment"></i> 134</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ai" >
+                    <img src="../images/community/ai1.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">B</div>
+                            <span class="post-author">波西米亚Bella</span>
+                        </div>
+                        <p class="post-caption">AI生成｜波西米亚风好适合度假！印花长裙太浪漫了～ #波西米亚 #度假风</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#波西米亚</span>
+                            <span class="post-tag">#度假风</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 1.6k</span>
+                            <span><i class="fas fa-comment"></i> 78</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ai" >
+                    <img src="../images/community/ai2.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">C</div>
+                            <span class="post-author">职场达人Cindy</span>
+                        </div>
+                        <p class="post-caption">AI搭配｜职场穿搭也要时髦！西装套装干练又优雅～ #职场穿搭 #通勤风</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#职场穿搭</span>
+                            <span class="post-tag">#通勤风</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 1.4k</span>
+                            <span><i class="fas fa-comment"></i> 65</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ai" >
+                    <img src="../images/community/ai3.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">H</div>
+                            <span class="post-author">嘻哈男孩HipHop</span>
+                        </div>
+                        <p class="post-caption">AI推荐｜HipHop风格走起！oversize穿搭太有范儿了～ #嘻哈风 #街头穿搭</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#嘻哈风</span>
+                            <span class="post-tag">#街头穿搭</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 2.5k</span>
+                            <span><i class="fas fa-comment"></i> 189</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card ai" >
+                    <img src="../images/community/ai4.png" alt="帖子图片" class="post-image">
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-avatar">P</div>
+                            <span class="post-author">软萌少女Pink</span>
+                        </div>
+                        <p class="post-caption">AI生成｜今天是soft girl！粉色系穿搭太甜了～ #软妹风 #粉色系</p>
+                        <div class="post-tags">
+                            <span class="post-tag">#软妹风</span>
+                            <span class="post-tag">#粉色系</span>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-heart"></i> 3.2k</span>
+                            <span><i class="fas fa-comment"></i> 267</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const searchInput = document.getElementById('searchInput');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        searchInput.addEventListener('focus', () => {
+            location.href = 'search.html';
+        });
+
+        function filterPosts(category) {
+            document.querySelectorAll('.post-card').forEach(card => {
+                card.style.display = card.classList.contains(category) ? 'block' : 'none';
+            });
+        }
+        
+        filterPosts('hot');
+        
+        document.querySelectorAll('.tab-item').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                filterPosts(category);
+            });
+        });
+    </script>
+</body>
+</html>

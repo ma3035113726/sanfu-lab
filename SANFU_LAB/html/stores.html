@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANFU LAB - 品牌故事</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .story-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .story-hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .story-hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .story-hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .story-section.reverse {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .story-image {
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-content {
+            padding: 20px;
+        }
+
+        .story-content h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .story-content p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .story-content .highlight {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+            border-left: 4px solid #a855f7;
+            padding: 15px 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 20px;
+        }
+
+        .story-content .highlight p {
+            margin: 0;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(236, 72, 153, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #fff;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .story-footer {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(236, 72, 153, 0.08));
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .story-footer h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .story-footer p {
+            font-size: 15px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .footer-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 40px;
+        }
+
+        .footer-stat {
+            text-align: center;
+        }
+
+        .footer-stat-value {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .story-section, .story-section.reverse {
+                grid-template-columns: 1fr;
+            }
+
+            .story-section.reverse .story-image {
+                order: 2;
+            }
+
+            .story-section.reverse .story-content {
+                order: 1;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-stats {
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">SANFU LAB</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ai-outfit.html">AI穿搭</a></li>
+                <li><a href="community.html">潮流社区</a></li>
+                <li><a href="lab.html">穿搭实验室</a></li>
+                <li><a href="stores.html" class="active">品牌故事</a></li>
+                <li><a href="member.html">会员中心</a></li>
+                <li><a href="closet.html">我的衣橱</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索穿搭风格..." id="searchInput">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-avatar" onclick="location.href='login.html'">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="story-container">
+        <div class="story-hero">
+            <h1>关于 SANFU LAB</h1>
+            <p>探索无限穿搭可能性，让每个人都能找到属于自己的时尚表达</p>
+        </div>
+
+        <div class="story-section">
+            <div class="story-image">
+                <img src="../images/story/story1.png" alt="品牌创意空间">
+            </div>
+            <div class="story-content">
+                <h2>我们的理念</h2>
+                <p>SANFU LAB 诞生于对时尚的热爱与对个性化表达的追求。我们相信，每个人都拥有独特的风格基因，穿搭不仅仅是衣物的组合，更是自我表达的艺术。</p>
+                <div class="highlight">
+                    <p>"搭出你的情绪风格" —— 让穿搭成为你表达自我的方式</p>
+                </div>
+                <p>我们致力于通过AI技术与时尚美学的融合，为年轻一代提供全新的穿搭体验。</p>
+            </div>
+        </div>
+
+        <div class="story-section reverse">
+            <div class="story-content">
+                <h2>AI驱动的时尚革命</h2>
+                <p>借助先进的AI技术，SANFU LAB 能够分析你的身形特点、风格偏好、甚至今日心情，为你生成专属的穿搭方案。告别选择困难，让AI成为你的私人穿搭顾问。</p>
+                <p>我们的AI系统经过海量时尚数据训练，能够精准捕捉潮流趋势，为你推荐最适合的搭配组合。</p>
+            </div>
+            <div class="story-image">
+                <img src="../images/story/story2.png" alt="AI时尚技术">
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <h3>智能穿搭推荐</h3>
+                <p>基于AI算法的个性化穿搭推荐，让每一套搭配都完美契合你的气质</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <h3>潮流社区</h3>
+                <p>汇聚时尚达人，分享穿搭灵感，打造属于年轻人的潮流聚集地</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shopping-bag"></i></div>
+                <h3>一站式购物</h3>
+                <p>从灵感获取到商品购买，无缝衔接的时尚购物体验</p>
+            </div>
+        </div>
+
+        <div class="story-footer">
+            <h2>与我们一起探索时尚的无限可能</h2>
+            <p>SANFU LAB 不仅是一个时尚平台，更是一种生活态度的表达。加入我们，开启你的时尚探索之旅。</p>
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <div class="footer-stat-value">500万+</div>
+                    <div class="footer-stat-label">时尚爱好者</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-value">10万+</div>
+                    <div class="footer-stat-label">穿搭方案</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-value">98%</div>
+                    <div class="footer-stat-label">用户满意度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const searchInput = document.getElementById('searchInput');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('focused');
+        });
+
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('focused');
+        });
+    </script>
+</body>
+</html>
