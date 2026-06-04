@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANFU LAB - 虚拟试穿</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">SANFU LAB</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ai-outfit.html">AI穿搭</a></li>
+                <li><a href="community.html">潮流社区</a></li>
+                <li><a href="lab.html">穿搭实验室</a></li>
+                <li><a href="stores.html">品牌故事</a></li>
+                <li><a href="member.html">会员中心</a></li>
+                <li><a href="closet.html">我的衣橱</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索穿搭风格..." id="searchInput">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-avatar" onclick="location.href='login.html'">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="virtual-tryon">
+        <div class="tryon-container">
+            <div class="tryon-header">
+                <h1 class="tryon-title">虚拟试穿</h1>
+                <p class="analysis-subtitle">360°全方位试穿体验，找到最适合你的穿搭</p>
+            </div>
+
+            <div class="tryon-grid">
+                <div class="clothing-selector">
+                    <h3 class="selector-title">服装选择</h3>
+                    <div class="clothing-categories">
+                        <div class="category-item active" data-category="top">
+                            <i class="fas fa-shirt"></i>
+                            <span>上衣</span>
+                        </div>
+                        <div class="category-item" data-category="bottom">
+                            <i class="fas fa-pants"></i>
+                            <span>下装</span>
+                        </div>
+                        <div class="category-item" data-category="shoes">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span>鞋子</span>
+                        </div>
+                        <div class="category-item" data-category="accessories">
+                            <i class="fas fa-gem"></i>
+                            <span>配饰</span>
+                        </div>
+                        <div class="category-item" data-category="hair">
+                            <i class="fas fa-user-circle"></i>
+                            <span>发型</span>
+                        </div>
+                        <div class="category-item" data-category="makeup">
+                            <i class="fas fa-smile"></i>
+                            <span>妆容</span>
+                        </div>
+                    </div>
+
+                    <div class="clothing-list" id="clothingList">
+                        <div class="clothing-item-small active" data-item="top1"></div>
+                        <div class="clothing-item-small" data-item="top2"></div>
+                        <div class="clothing-item-small" data-item="top3"></div>
+                        <div class="clothing-item-small" data-item="top4"></div>
+                        <div class="clothing-item-small" data-item="top5"></div>
+                        <div class="clothing-item-small" data-item="top6"></div>
+                    </div>
+                </div>
+
+                <div class="tryon-display">
+                    <div class="tryon-bg y2k" id="tryonBg"></div>
+                    <div class="model-3d">
+                        <div class="model-container" id="modelContainer">
+                            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=fashion%20model%20full%20body%20avatar%20y2k%20style%20metallic%20silver%20outfit%20transparent%20background%20png&image_size=portrait_16_9" alt="虚拟模特" style="height: 100%;">
+                        </div>
+                    </div>
+                    <div class="tryon-controls">
+                        <button class="control-btn-small" id="rotateLeft">
+                            <i class="fas fa-rotate-left"></i>
+                        </button>
+                        <button class="control-btn-small" id="zoomIn">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                        <button class="control-btn-small" id="zoomOut">
+                            <i class="fas fa-search-minus"></i>
+                        </button>
+                        <button class="control-btn-small" id="rotateRight">
+                            <i class="fas fa-rotate-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tryon-info">
+                    <div class="info-section">
+                        <h4 class="info-title">配色推荐</h4>
+                        <div class="color-palette">
+                            <div class="color-circle" style="background: #A855F7;"></div>
+                            <div class="color-circle" style="background: #F472B6;"></div>
+                            <div class="color-circle" style="background: #60A5FA;"></div>
+                            <div class="color-circle active" style="background: #E8E8E8;"></div>
+                            <div class="color-circle" style="background: #FCD34D;"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h4 class="info-title">风格匹配�?/h4>
+                        <div class="matching-score">
+                            <span style="color: white;">Y2K甜酷�?/span>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: 92%;"></div>
+                            </div>
+                            <span style="color: #A855F7; font-weight: 600;">92%</span>
+                        </div>
+                        <div class="matching-score">
+                            <span style="color: white;">整体协调</span>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: 88%;"></div>
+                            </div>
+                            <span style="color: #A855F7; font-weight: 600;">88%</span>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h4 class="info-title">AI点评</h4>
+                        <div class="ai-review">
+                            <p>这套Y2K风格穿搭非常适合你！银色金属感上衣搭配高腰短裙，完美展现你的身材优势。建议搭配亮色配饰提升整体亮点�?/p>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h4 class="info-title">潮流指数</h4>
+                        <div class="trend-indicator">
+                            <i class="fas fa-trending-up"></i>
+                            <span>本周热门 +12%</span>
+                        </div>
+                    </div>
+
+                    <button class="action-btn primary" style="width: 100%; margin-top: 20px;">
+                        保存试穿效果
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const searchInput = document.getElementById('searchInput');
+        const tryonBg = document.getElementById('tryonBg');
+        const modelContainer = document.getElementById('modelContainer');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        searchInput.addEventListener('focus', () => {
+            location.href = 'search.html';
+        });
+
+        document.querySelectorAll('.category-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                updateClothingList(category);
+                updateBackground(category);
+            });
+        });
+
+        function updateClothingList(category) {
+            const clothingList = document.getElementById('clothingList');
+            clothingList.innerHTML = '';
+            for (let i = 1; i <= 6; i++) {
+                const item = document.createElement('div');
+                item.className = 'clothing-item-small';
+                item.dataset.item = `${category}${i}`;
+                clothingList.appendChild(item);
+            }
+        }
+
+        function updateBackground(category) {
+            tryonBg.className = 'tryon-bg';
+            if (category === 'top' || category === 'bottom') {
+                tryonBg.classList.add('y2k');
+            } else if (category === 'shoes') {
+                tryonBg.classList.add('sport');
+            } else {
+                tryonBg.classList.add('clean');
+            }
+        }
+
+        document.querySelectorAll('.clothing-item-small').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.clothing-item-small').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        let rotation = 0;
+        let scale = 1;
+
+        document.getElementById('rotateLeft').addEventListener('click', () => {
+            rotation -= 30;
+            modelContainer.style.transform = `rotateY(${rotation}deg) scale(${scale})`;
+        });
+
+        document.getElementById('rotateRight').addEventListener('click', () => {
+            rotation += 30;
+            modelContainer.style.transform = `rotateY(${rotation}deg) scale(${scale})`;
+        });
+
+        document.getElementById('zoomIn').addEventListener('click', () => {
+            scale = Math.min(scale + 0.1, 1.5);
+            modelContainer.style.transform = `rotateY(${rotation}deg) scale(${scale})`;
+        });
+
+        document.getElementById('zoomOut').addEventListener('click', () => {
+            scale = Math.max(scale - 0.1, 0.8);
+            modelContainer.style.transform = `rotateY(${rotation}deg) scale(${scale})`;
+        });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            .tryon-controls {
+                position: absolute;
+                bottom: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 12px;
+            }
+            .control-btn-small {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: white;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .control-btn-small:hover {
+                background: rgba(168, 85, 247, 0.3);
+                border-color: #A855F7;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

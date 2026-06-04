@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANFU LAB - 预约到店穿搭</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">SANFU LAB</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ai-outfit.html">AI穿搭</a></li>
+                <li><a href="community.html">潮流社区</a></li>
+                <li><a href="lab.html">穿搭实验室</a></li>
+                <li><a href="stores.html">品牌故事</a></li>
+                <li><a href="member.html">会员中心</a></li>
+                <li><a href="closet.html">我的衣橱</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索穿搭风格..." id="searchInput">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-avatar" onclick="location.href='login.html'">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="booking-page">
+        <div class="booking-container">
+            <div class="booking-header">
+                <h1 class="booking-title">预约到店穿搭体验</h1>
+                <p class="booking-subtitle">享受专业穿搭顾问一对一服务</p>
+            </div>
+
+            <div class="booking-content">
+                <div class="booking-form">
+                    <div class="form-section">
+                        <h3>选择门店</h3>
+                        <div class="store-select">
+                            <div class="store-option active">
+                                <div class="store-check"><i class="fas fa-check"></i></div>
+                                <div class="store-details">
+                                    <div class="store-name">三福百货（万达广场店�?/div>
+                                    <div class="store-address">万达广场B1�?| 距离 500m</div>
+                                </div>
+                            </div>
+                            <div class="store-option">
+                                <div class="store-check"><i class="fas fa-check"></i></div>
+                                <div class="store-details">
+                                    <div class="store-name">三福百货（银泰城店）</div>
+                                    <div class="store-address">银泰�?�?| 距离 1.2km</div>
+                                </div>
+                            </div>
+                            <div class="store-option">
+                                <div class="store-check"><i class="fas fa-check"></i></div>
+                                <div class="store-details">
+                                    <div class="store-name">三福百货（龙湖天街店�?/div>
+                                    <div class="store-address">龙湖天街2�?| 距离 2.5km</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>选择日期</h3>
+                        <div class="date-grid">
+                            <div class="date-item">
+                                <div class="date-day">今天</div>
+                                <div class="date-date">25</div>
+                            </div>
+                            <div class="date-item active">
+                                <div class="date-day">明天</div>
+                                <div class="date-date">26</div>
+                            </div>
+                            <div class="date-item">
+                                <div class="date-day">周三</div>
+                                <div class="date-date">27</div>
+                            </div>
+                            <div class="date-item">
+                                <div class="date-day">周四</div>
+                                <div class="date-date">28</div>
+                            </div>
+                            <div class="date-item">
+                                <div class="date-day">周五</div>
+                                <div class="date-date">29</div>
+                            </div>
+                            <div class="date-item">
+                                <div class="date-day">周六</div>
+                                <div class="date-date">30</div>
+                            </div>
+                            <div class="date-item">
+                                <div class="date-day">周日</div>
+                                <div class="date-date">31</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>选择时间</h3>
+                        <div class="time-slots">
+                            <span class="time-slot">10:00</span>
+                            <span class="time-slot">11:00</span>
+                            <span class="time-slot">14:00</span>
+                            <span class="time-slot active">15:00</span>
+                            <span class="time-slot">16:00</span>
+                            <span class="time-slot">17:00</span>
+                            <span class="time-slot">18:00</span>
+                            <span class="time-slot">19:00</span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>穿搭风格偏好</h3>
+                        <div class="style-tags">
+                            <span class="style-tag">Y2K甜酷�?/span>
+                            <span class="style-tag">Clean Fit</span>
+                            <span class="style-tag">美式复古</span>
+                            <span class="style-tag">多巴胺穿�?/span>
+                            <span class="style-tag">运动机能�?/span>
+                            <span class="style-tag">职场通勤</span>
+                            <span class="style-tag">约会穿搭</span>
+                            <span class="style-tag">休闲日常</span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>特殊需�?/h3>
+                        <textarea class="form-textarea" placeholder="请描述你的特殊需求或期望效果..."></textarea>
+                    </div>
+
+                    <button class="booking-submit">确认预约</button>
+                </div>
+
+                <div class="booking-benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-user-check"></i></div>
+                        <h3>一对一服务</h3>
+                        <p>专业穿搭顾问全程陪同</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-magic"></i></div>
+                        <h3>专属搭配</h3>
+                        <p>根据你的特点定制穿搭方案</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-camera"></i></div>
+                        <h3>穿搭大片</h3>
+                        <p>免费拍摄穿搭造型照片</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-percent"></i></div>
+                        <h3>专属折扣</h3>
+                        <p>预约客户享额�?折优�?/p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const searchInput = document.getElementById('searchInput');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        searchInput.addEventListener('focus', () => {
+            location.href = 'search.html';
+        });
+
+        document.querySelectorAll('.store-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.store-option').forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.date-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.date-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.style-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+
+        document.querySelector('.booking-submit').addEventListener('click', function() {
+            const successModal = document.createElement('div');
+            successModal.className = 'success-modal';
+            successModal.innerHTML = `
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h2>预约成功</h2>
+                    <p>我们已收到您的预约请�?/p>
+                    <div class="booking-details">
+                        <div>门店：三福百货（万达广场店）</div>
+                        <div>时间：明�?15:00</div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(successModal);
+        });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            .booking-content {
+                display: grid;
+                grid-template-columns: 1fr 300px;
+                gap: 40px;
+            }
+            .form-section {
+                margin-bottom: 32px;
+            }
+            .form-section h3 {
+                font-size: 16px;
+                font-weight: 600;
+                color: white;
+                margin-bottom: 16px;
+            }
+            .store-select {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .store-option {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 16px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+            }
+            .store-option:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .store-option.active {
+                border-color: #A855F7;
+                background: rgba(168, 85, 247, 0.1);
+            }
+            .store-check {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: transparent;
+            }
+            .store-option.active .store-check {
+                background: #A855F7;
+                border-color: #A855F7;
+                color: white;
+            }
+            .store-details {
+                flex: 1;
+            }
+            .store-details .store-name {
+                font-weight: 600;
+                color: white;
+                margin-bottom: 4px;
+            }
+            .store-details .store-address {
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .date-grid {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 8px;
+            }
+            .date-item {
+                text-align: center;
+                padding: 12px 8px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .date-item:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .date-item.active {
+                background: linear-gradient(135deg, #A855F7, #F472B6);
+            }
+            .date-day {
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.6);
+                margin-bottom: 4px;
+            }
+            .date-item.active .date-day {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .date-date {
+                font-size: 18px;
+                font-weight: 700;
+                color: white;
+            }
+            .time-slots {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .time-slot {
+                padding: 10px 20px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .time-slot:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .time-slot.active {
+                background: linear-gradient(135deg, #A855F7, #F472B6);
+                color: white;
+            }
+            .style-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .style-tag {
+                padding: 8px 16px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                color: rgba(255, 255, 255, 0.8);
+                border: 1px solid transparent;
+            }
+            .style-tag:hover {
+                border-color: rgba(168, 85, 247, 0.5);
+            }
+            .style-tag.selected {
+                background: rgba(168, 85, 247, 0.2);
+                border-color: #A855F7;
+            }
+            .form-textarea {
+                width: 100%;
+                height: 100px;
+                padding: 16px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: white;
+                resize: none;
+                font-size: 14px;
+            }
+            .form-textarea::placeholder {
+                color: rgba(255, 255, 255, 0.4);
+            }
+            .booking-submit {
+                width: 100%;
+                padding: 20px;
+                border-radius: 16px;
+                background: linear-gradient(135deg, #A855F7, #F472B6);
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 20px;
+            }
+            .booking-submit:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+            }
+            .booking-benefits {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .benefit-card {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 16px;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+            .benefit-icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+                background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(244, 114, 182, 0.2));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #F472B6;
+                font-size: 20px;
+            }
+            .benefit-card h3 {
+                font-size: 15px;
+                font-weight: 600;
+                color: white;
+                margin-bottom: 2px;
+            }
+            .benefit-card p {
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .success-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2000;
+            }
+            .success-content {
+                background: #1A1A2E;
+                border-radius: 24px;
+                padding: 40px;
+                text-align: center;
+            }
+            .success-icon {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #A855F7, #F472B6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                color: white;
+                font-size: 32px;
+            }
+            .success-content h2 {
+                font-size: 28px;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 8px;
+            }
+            .success-content p {
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 20px;
+            }
+            .booking-details {
+                text-align: left;
+                padding: 16px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+            }
+            .booking-details div {
+                color: rgba(255, 255, 255, 0.8);
+                margin-bottom: 8px;
+            }
+            .booking-details div:last-child {
+                margin-bottom: 0;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
